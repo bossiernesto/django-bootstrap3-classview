@@ -80,7 +80,7 @@ class ProjectBuilder(object):
 
         self._create_dir(self.app_name, "views")
         self._create_file(self._get_app_dir("views", "__init__.py"), "")
-        self._create_file(self._get_app_dir("views", "index.py"), render_template("index"))
+        self._create_file(self._get_app_dir("views", "index.py"), render_template("index.html"))
 
         os.chdir(self.project_name)
 

@@ -1,1 +1,1 @@
-recursive-include django_bootstrap3_app/management/templates *.html
+recursive-include django_bootstrap3_app/management/templates *.tm
