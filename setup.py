@@ -37,5 +37,5 @@ setup(
         "dj_database_url",
         "simplejson",
     ],
-    scripts=['bin/create_bootstrap_project'],
+    scripts=['bin/start_bootstrap_project'],
 )
