@@ -1,0 +1,5 @@
+django >= 1.6
+django_conventions
+django-webtest
+south
+dj_database_url
