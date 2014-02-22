@@ -3,3 +3,5 @@ django_conventions
 django-webtest
 south
 dj_database_url
+
+simplejson

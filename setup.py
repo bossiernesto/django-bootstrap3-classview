@@ -34,7 +34,8 @@ setup(
         "django_conventions",
         "south",
         "django-webtest",
-        "dj_database_url"
+        "dj_database_url",
+        "simplejson",
     ],
     scripts=['bin/create_bootstrap_project'],
 )
