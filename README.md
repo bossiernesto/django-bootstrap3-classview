@@ -112,6 +112,34 @@ class Person(BaseEntity):
 
 
 
+## Service base class and extension
 
+Service classes can be seen as classes that are between the model and the view and act like interfaces for a model class.
+For this, we have a base class for the services that will form part of the models.
 
+The base class has methods such as all (that will get all the objects for the entity), get_one (that will get the first
+object based on the filter attributes passed as args or kwargs), _get_or_new (that based on a dictionary passed as parameter
+it'll get the object with those attributes or create an entity if no object has been found)
+
+For more references for the base Service class see the section Reference of Service Class
+
+### Extending Service Class
+
+To create a service class based on the base one, just follow the next example:
+
+```python
+from my_bootstrap_app.models import Person
+from django_bootstrap3view_app.services.base import BaseService
+
+class PersonService(BaseService):
+
+    entity = Person
+
+    #define methods for you service.
+
+```
+
+### Reference for Service Class
+
+TBA
 
