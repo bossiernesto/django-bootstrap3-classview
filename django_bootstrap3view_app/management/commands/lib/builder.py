@@ -29,6 +29,7 @@ class ProjectBuilder(object):
         """
             Builds the project structure and create files.
         """
+        from django.core.management.base import CommandError
 
         self.formater.custom_message("WHITEONBLUE", '', "                                                     ")
         self.formater.custom_message("WHITEONBLUE", '', "         Django Bootstrap 3 Project Creator          ")
@@ -39,17 +40,20 @@ class ProjectBuilder(object):
             self.formater.warning_message("Usage: create_bootstrap_project [project_name]")
             sys.exit()
         else:
-            self.make_project()
-            self.setup_media()
-            self.setup_bootstrap()
-            self.make_default_app()
+            try:
+                self.make_project()
+                self.setup_media()
+                self.setup_bootstrap()
+                self.make_default_app()
 
-            self.setup_urls()
-            self.setup_settings()
+                self.setup_urls()
+                self.setup_settings()
 
-            self.go_back_to_main_dir()
+                self.go_back_to_main_dir()
 
-            self.formater.success_message("Bootstrap Django App {0} created!".format(self.project_name.title()))
+                self.formater.success_message("Bootstrap Django App {0} created!".format(self.project_name.title()))
+            except CommandError as e:
+                self.formater.error_message("Error creating product: {0}".format(e.message))
 
     def make_project(self):
         """
