@@ -84,9 +84,9 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'django_bootstrap3.urls'
+ROOT_URLCONF = 'django_bootstrap3view.urls'
 
-WSGI_APPLICATION = 'django_bootstrap3.wsgi.application'
+WSGI_APPLICATION = 'django_bootstrap3view.wsgi.application'
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 

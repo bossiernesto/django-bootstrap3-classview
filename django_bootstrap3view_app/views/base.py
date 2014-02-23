@@ -5,8 +5,8 @@ import simplejson as json
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 
-from django_bootstrap3_app.utils.render import render, render_string
-from django_bootstrap3_app.utils.python import convert_to_bool
+from django_bootstrap3view_app.utils.render import render, render_string
+from django_bootstrap3view_app.utils.python import convert_to_bool
 
 
 class BaseView(TemplateView):

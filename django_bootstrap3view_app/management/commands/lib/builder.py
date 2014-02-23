@@ -4,7 +4,7 @@ from django.core.management import call_command
 from django.utils.crypto import get_random_string
 from .templates import render_template
 import sys
-from django_bootstrap3_app.utils.ansi_formater import AnsiColorsFormater
+from django_bootstrap3view_app.utils.ansi_formater import AnsiColorsFormater
 
 
 class ProjectBuilder(object):
@@ -76,7 +76,7 @@ class ProjectBuilder(object):
 
         self._create_dir(self.app_name, "views")
         self._create_file(self._get_app_dir("views", "__init__.py"), "")
-        self._create_file(self._get_app_dir("views", "index.py"), render_template("index.html"))
+        self._create_file(self._get_app_dir("views", "index.py"), render_template("index.tm"))
 
         os.chdir(self.project_name)
 
@@ -131,7 +131,7 @@ class ProjectBuilder(object):
         self.formater.custom_message("OKCYAN", "", "Done.\n")
 
     def setup_bootstrap(self):
-        from django_bootstrap3.settings import BOOTSTRAP_ROOT
+        from django_bootstrap3view.settings import BOOTSTRAP_ROOT
         import distutils.dir_util
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")

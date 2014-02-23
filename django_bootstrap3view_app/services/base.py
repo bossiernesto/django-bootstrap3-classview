@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import get_object_or_404
 
-from django_bootstrap3_app.utils.render import render, render_string
-from django_bootstrap3_app.utils.python import convert_to_bool
+from django_bootstrap3view_app.utils.render import render, render_string
+from django_bootstrap3view_app.utils.python import convert_to_bool
 
 
 class BaseService(object):

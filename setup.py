@@ -6,7 +6,7 @@ __author__ = 'Ernesto Bossi'
 __version__ = "0.0.1"
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
-templates_dir = os.path.join(__dir__, "django_bootstrap3_app", "management", "templates")
+templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management", "templates")
 templates_files = [os.path.join(templates_dir, file) for file in os.listdir(templates_dir)]
 
 setup(
