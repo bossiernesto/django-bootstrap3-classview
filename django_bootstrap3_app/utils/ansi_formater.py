@@ -11,6 +11,9 @@ class AnsiColors(object):
     ENDC = '\033[0m'
     WHITEONBLUE = '\033[37;44m'
     WHITE = '\033[37m'
+    YELLOW = '\033[33m'
+    MAGENTA = '\033[35m'
+    BOLD_MAGENTA = '\033[1;35m'
 
     def disable(self):
         self.HEADER = ''

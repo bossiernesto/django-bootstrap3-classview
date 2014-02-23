@@ -8,7 +8,6 @@ from django_bootstrap3_app.utils.ansi_formater import AnsiColorsFormater
 
 
 class ProjectBuilder(object):
-
     def __init__(self, *args):
         """
             Setups the project_name and app_name based on *args
@@ -31,19 +30,18 @@ class ProjectBuilder(object):
             Builds the project structure and create files.
         """
 
-        print()
         self.formater.custom_message("WHITEONBLUE", '', "                                                     ")
         self.formater.custom_message("WHITEONBLUE", '', "         Django Bootstrap 3 Project Creator          ")
         self.formater.custom_message("WHITEONBLUE", '', "                                                     ")
-        print()
 
         if self.project_name is None:
             self.formater.warning_message("Please provide a project name.")
-            self.formater.warning_message("Usage: start_shopify_app [project_name]")
+            self.formater.warning_message("Usage: create_bootstrap_project [project_name]")
             sys.exit()
         else:
             self.make_project()
             self.setup_media()
+            self.setup_bootstrap()
             self.make_default_app()
 
             self.setup_urls()
@@ -51,8 +49,7 @@ class ProjectBuilder(object):
 
             self.go_back_to_main_dir()
 
-            print()
-            self.formater.success_message("Bootstrap Django app {0} created!".format(self.project_name))
+            self.formater.success_message("Bootstrap Django App {0} created!".format(self.project_name.title()))
 
     def make_project(self):
         """
@@ -71,7 +68,6 @@ class ProjectBuilder(object):
             Creates the django app, the views root folder and some example views.
         """
 
-        print()
         self.formater.custom_message("OKCYAN", "", "Starting Django app...")
 
         call_command("startapp", self.app_name)
@@ -84,12 +80,13 @@ class ProjectBuilder(object):
 
         os.chdir(self.project_name)
 
+        self.formater.custom_message("OKCYAN", "", "Done.\n")
+
     def setup_settings(self):
         """
             Replaces the django default settings.py for a template we provide.
         """
 
-        print()
         self.formater.custom_message("OKCYAN", "", "Configuring settings.py...")
 
         # Create a random SECRET_KEY hash to put it in the main settings.
@@ -103,6 +100,8 @@ class ProjectBuilder(object):
 
         self._create_file("settings.py", settings_file)
 
+        self.formater.custom_message("OKCYAN", "", "Done.\n")
+
     def setup_urls(self):
         """
             Replaces the django default urls.py for a template we provide.
@@ -115,18 +114,36 @@ class ProjectBuilder(object):
         urls_file = render_template(template_name, {"app_name": self.app_name})
         self._create_file("urls.py", urls_file)
 
+        self.formater.custom_message("OKCYAN", "", "Done.\n")
+
     def setup_media(self):
         """
             Creates the media folder
         """
 
-        print()
         self.formater.custom_message("OKCYAN", "", "Creating media folder...")
 
         self._create_dir("media")
         self._create_dir("media", "js")
         self._create_dir("media", "css")
         self._create_dir("media", "img")
+
+        self.formater.custom_message("OKCYAN", "", "Done.\n")
+
+    def setup_bootstrap(self):
+        from django_bootstrap3.settings import BOOTSTRAP_ROOT
+        import distutils.dir_util
+
+        self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
+        self._create_dir("bootstrap")
+        self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
+
+        self.formater.custom_message("BOLD_MAGENTA", "", "Copying bootstrap files...")
+        #copy all bootstrapfiles
+        distutils.dir_util.copy_tree(BOOTSTRAP_ROOT, os.path.join("bootstrap"))
+
+        self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
+
 
     def go_back_to_main_dir(self):
         """

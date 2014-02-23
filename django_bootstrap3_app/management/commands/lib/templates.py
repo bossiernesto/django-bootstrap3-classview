@@ -1,7 +1,7 @@
 import os.path
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
-templates_dir = os.path.join(__dir__, os.pardir, "../templates")
+templates_dir = os.path.join(__dir__, os.pardir, "templates")
 
 
 def render_template(template_name, context=None):
@@ -13,8 +13,8 @@ def render_template(template_name, context=None):
     if context is None:
         context = {}
 
-    if not template_name.endswith(".tm"):
-        template_name = "{0}.tm".format(template_name)
+    if not template_name.endswith(".tm") and not template_name.endswith(".html"):
+            template_name = "{0}.tm".format(template_name)
 
     with open(os.path.join(templates_dir, template_name), "r") as f:
         content = f.read()

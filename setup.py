@@ -2,15 +2,12 @@
 import os
 from setuptools import setup, find_packages
 
-#from djangp_shopify import __version__
 __author__ = 'Ernesto Bossi'
 __version__ = "0.0.1"
-
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(__dir__, "django_bootstrap3_app", "management", "templates")
 templates_files = [os.path.join(templates_dir, file) for file in os.listdir(templates_dir)]
-
 
 setup(
     name='django-classview-bootstrap3',
@@ -30,12 +27,12 @@ setup(
         (templates_dir, templates_files)
     ],
     include_package_data=True,
-    install_requires = [
+    install_requires=[
         "django_conventions",
         "south",
         "django-webtest",
         "dj_database_url",
         "simplejson",
     ],
-    scripts=['bin/start_bootstrap_project'],
+    scripts=['bin/start_bootstrap_project.py'],
 )

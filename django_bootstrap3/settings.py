@@ -82,7 +82,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'shopify_app.middleware.LoginProtection',
 )
 
 ROOT_URLCONF = 'django_bootstrap3.urls'
@@ -151,3 +150,6 @@ LOGGING = {
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 SOUTH_TESTS_MIGRATE = False
+
+# Absolute filesystem path to the directory that will hold the bootstrap files for the project.
+BOOTSTRAP_ROOT = os.path.join(SITE_ROOT, "bootstrap")
