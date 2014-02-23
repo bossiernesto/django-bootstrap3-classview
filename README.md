@@ -12,9 +12,9 @@ for you project.
 
 ### Features
 
-Class oriented views.
-Simple Project creation with a single command line.
-Base classes for views, models and services with common methods for simpler usage of project classes.
+* Class oriented views.
+* Simple Project creation with a single command line.
+* Base classes for views, models and services with common methods for simpler usage of project classes.
 
 ## Instalation
 
@@ -34,12 +34,12 @@ pip install django-classview-bootstrap3
 
 If you're installing with the targ.gz or zip distribution, you'll need to have these requirements installed in your python enviroment:
 
-django >= 1.6
-django_conventions
-django-webtest
-south
-dj_database_url
-simplejson
+* django >= 1.6
+* django_conventions
+* django-webtest
+* south
+* dj_database_url
+* simplejson
 
 you can get them with the following command, after you have the project uncompressed:
 
