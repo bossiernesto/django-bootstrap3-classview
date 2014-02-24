@@ -152,4 +152,4 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 SOUTH_TESTS_MIGRATE = False
 
 # Absolute filesystem path to the directory that will hold the bootstrap files for the project.
-BOOTSTRAP_ROOT = os.path.join(SITE_ROOT, "bootstrap")
+BOOTSTRAP_ROOT = os.path.join(SITE_ROOT, "django_bootstrap3view_app/bootstrap")

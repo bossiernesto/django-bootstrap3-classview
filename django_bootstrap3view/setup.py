@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 __author__ = 'Ernesto Bossi'
-__version__ = "0.0.3"
+__version__ = "0.0.3alpha"
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management","commands" , "templates")

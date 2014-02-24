@@ -136,14 +136,16 @@ class ProjectBuilder(object):
 
     def setup_bootstrap(self):
         import distutils.dir_util
+        __dir__ = os.path.dirname(os.path.abspath(__file__))
+        bootstrap_dir = os.path.join(__dir__, os.pardir, "../../bootstrap")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
-        self._create_dir("bootstrap")
+        self._create_dir("media","bootstrap")
         self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Copying bootstrap files...")
         #copy all bootstrapfiles
-        distutils.dir_util.copy_tree(os.path.join("../../../../bootstrap"), self._get_dir("bootstrap"))
+        distutils.dir_util.copy_tree(bootstrap_dir, self._get_dir("media","bootstrap"))
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
 
