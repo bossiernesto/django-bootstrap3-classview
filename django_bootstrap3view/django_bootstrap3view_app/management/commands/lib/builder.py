@@ -135,7 +135,6 @@ class ProjectBuilder(object):
         self.formater.custom_message("OKCYAN", "", "Done.\n")
 
     def setup_bootstrap(self):
-        from django_bootstrap3view.django_bootstrap3view.settings import BOOTSTRAP_ROOT
         import distutils.dir_util
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
