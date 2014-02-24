@@ -54,12 +54,7 @@ Creating a project is pretty simple, just issue the following command on your sh
 
 
 ```python
-python start_bootstrap_project <your_project_name>
-```
-or
-
-```python
-./start_bootstrap_project <your_project_name>
+$ create_bootstrap_project <your_project_name>
 ```
 
 This command will create a project with the name passed as parameter. If no name has been issued with the command, expect
