@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 __author__ = 'Ernesto Bossi'
-__version__ = "0.0.3alpha"
+__version__ = "0.0.4"
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management","commands" , "templates")
@@ -15,7 +15,7 @@ setup(
     description='Django-Bootstrap 3 generic template with class views',
     author=__author__,
     author_email='bossi.ernestog@gmail.com',
-    url='',
+    url='http://bossiernesto.github.io/django-bootstrap3-classview/',
     classifiers=[
         "Framework :: Django",
         "Operating System :: OS Independent",
