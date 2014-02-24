@@ -60,15 +60,15 @@ $ create_bootstrap_project <your_project_name>
 This command will create a project with the name passed as parameter. If no name has been issued with the command, expect
 the following output with this error:
 
-![IMAGE](/doc/images/no_project_name.png)
+![IMAGE](https://raw.github.com/bossiernesto/django-bootstrap3-classview/master/django_bootstrap3view/doc/images/no_project_name.png)
 
 If the name of the project exists as a directory where you're issuing the command, expect the following output:
 
-![IMAGE](/doc/images/existing_project_name.png)
+![IMAGE](https://raw.github.com/bossiernesto/django-bootstrap3-classview/master/django_bootstrap3view/doc/images/existing_project_name.png)
 
 Otherwise the project will be created as follows (using testapp as the project name):
 
-![IMAGE](/doc/images/correct_project_name.png)
+![IMAGE](https://raw.github.com/bossiernesto/django-bootstrap3-classview/master/django_bootstrap3view/doc/images/correct_project_name.png)
 
 ## Base Model and extension
 
@@ -140,5 +140,5 @@ TBA
 
 ## Thanks
 
-Special thanks to @jmg for helping me with the build of this project.
+Special thanks to [jmg] (https://www.github.com/jmg) for helping me with the development of this project.
 
