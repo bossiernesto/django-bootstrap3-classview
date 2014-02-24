@@ -5,7 +5,9 @@ from django.utils.crypto import get_random_string
 from .templates import render_template
 import sys
 from django_bootstrap3view_app.utils.ansi_formater import AnsiColorsFormater
+import distutils.dir_util
 
+__dir__ = os.path.dirname(os.path.abspath(__file__))
 
 class ProjectBuilder(object):
     def __init__(self, *args):
@@ -126,17 +128,22 @@ class ProjectBuilder(object):
         """
 
         self.formater.custom_message("OKCYAN", "", "Creating media folder...")
+        mediaico_dir = os.path.join(__dir__, os.pardir, "../../media")
 
         self._create_dir("media")
         self._create_dir("media", "js")
         self._create_dir("media", "css")
         self._create_dir("media", "img")
 
+        self.formater.custom_message("YELLOW", "", "Adding favicon...")
+
+        distutils.dir_util.copy_tree(mediaico_dir, self._get_dir("media"))
+
+        self.formater.custom_message("YELLOW", "", "Done.")
+
         self.formater.custom_message("OKCYAN", "", "Done.\n")
 
     def setup_bootstrap(self):
-        import distutils.dir_util
-        __dir__ = os.path.dirname(os.path.abspath(__file__))
         bootstrap_dir = os.path.join(__dir__, os.pardir, "../../bootstrap")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
