@@ -135,7 +135,7 @@ class ProjectBuilder(object):
         self.formater.custom_message("OKCYAN", "", "Done.\n")
 
     def setup_bootstrap(self):
-        from django_bootstrap3view.settings import BOOTSTRAP_ROOT
+        from django_bootstrap3view.django_bootstrap3view.settings import BOOTSTRAP_ROOT
         import distutils.dir_util
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
@@ -144,7 +144,7 @@ class ProjectBuilder(object):
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Copying bootstrap files...")
         #copy all bootstrapfiles
-        distutils.dir_util.copy_tree(BOOTSTRAP_ROOT, os.path.join("bootstrap"))
+        distutils.dir_util.copy_tree(os.path.join("../../../../bootstrap"), self._get_dir("bootstrap"))
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
 
