@@ -143,3 +143,7 @@ class PersonService(BaseService):
 
 TBA
 
+## Thanks
+
+Special thanks to @jmg for helping me with the build of this project.
+
