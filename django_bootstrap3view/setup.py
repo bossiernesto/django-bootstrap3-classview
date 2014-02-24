@@ -2,6 +2,7 @@
 import os
 from setuptools import setup, find_packages
 
+#define variables for setup.py
 __author__ = 'Ernesto Bossi'
 __version__ = "0.0.6"
 
