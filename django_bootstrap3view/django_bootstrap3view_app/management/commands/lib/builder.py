@@ -144,6 +144,9 @@ class ProjectBuilder(object):
         self.formater.custom_message("OKCYAN", "", "Done.\n")
 
     def setup_bootstrap(self):
+        """
+        Creates the bootstrap directory
+        """
         bootstrap_dir = os.path.join(__dir__, os.pardir, "../../bootstrap")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")

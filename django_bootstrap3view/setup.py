@@ -4,10 +4,10 @@ from setuptools import setup, find_packages
 
 #define variables for setup.py
 __author__ = 'Ernesto Bossi'
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
-templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management","commands" , "templates")
+templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management", "commands", "templates")
 templates_files = [os.path.join(templates_dir, file) for file in os.listdir(templates_dir)]
 
 setup(
@@ -15,6 +15,7 @@ setup(
     version=__version__,
     description='Django-Bootstrap 3 generic template with class views',
     author=__author__,
+    license="BSD-3",
     author_email='bossi.ernestog@gmail.com',
     url='http://bossiernesto.github.io/django-bootstrap3-classview/',
     classifiers=[
@@ -35,7 +36,9 @@ setup(
         "django-webtest",
         "dj_database_url",
         "simplejson",
+        "csv",
     ],
+    data_files=[("", ["LICENSE.txt", "changelog.md"])],
     scripts=['bin/create_bootstrap_project'],
 )
 

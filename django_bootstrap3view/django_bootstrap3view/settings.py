@@ -13,6 +13,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -25,7 +26,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'dev.sqlite3', # Or path to database file if using sqlite3.
+        'NAME': 'development.sqlite3', # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -51,13 +52,7 @@ SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir)
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '^_rg6v3rk)xyzrnlvy!fzs!sux=dqy=tnf$9d$%ot=t17_3)=x'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
