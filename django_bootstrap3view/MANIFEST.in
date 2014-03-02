@@ -1,4 +1,3 @@
 recursive-include django_bootstrap3view_app/management/commands/templates *
 recursive-include django_bootstrap3view_app/management/commands/media *
-include LICENCSE
 recursive-include django_bootstrap3view_app/bootstrap *
