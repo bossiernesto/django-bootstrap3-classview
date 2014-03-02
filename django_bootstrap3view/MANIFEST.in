@@ -1,1 +1,5 @@
-recursive-include django_bootstrap3view_app/management/templates *.tm
+recursive-include django_bootstrap3view_app/management/commands/templates *
+recursive-include django_bootstrap3view_app/management/commands/media *
+include ../LICENCSE
+include ../changelog.md
+recursive-include django_bootstrap3view_app/bootstrap *

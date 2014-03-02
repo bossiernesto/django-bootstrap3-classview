@@ -128,7 +128,7 @@ class ProjectBuilder(object):
         """
 
         self.formater.custom_message("OKCYAN", "", "Creating media folder...")
-        mediaico_dir = os.path.join(__dir__, os.pardir, "../../media")
+        mediaico_dir = os.path.join(__dir__, os.pardir, "media")
 
         self._create_dir("media")
         self._create_dir("media", "js")
