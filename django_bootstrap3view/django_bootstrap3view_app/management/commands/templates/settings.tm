@@ -55,7 +55,7 @@ SITE_ROOT = os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir)
 MEDIA_ROOT = os.path.join(SITE_ROOT, "media")
 
 # Absolute filesystem path to the directory that will hold the bootstrap files for the project.
-BOOTSTRAP_ROOT = os.path.join(SITE_ROOT, "bootstrap")
+BOOTSTRAP_ROOT = os.path.join(SITE_ROOT, "media/bootstrap")
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
