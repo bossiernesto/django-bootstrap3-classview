@@ -3,7 +3,7 @@ Django Bootstrap 3 Boilerplate
 
 Django Bootstrap 3 template project with class view feature
 
-Current stable version: 0.0.6
+Current stable version: 0.0.8
 
 ## Introduction
 
