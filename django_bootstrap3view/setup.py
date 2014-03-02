@@ -27,7 +27,7 @@ setup(
     ],
     packages=find_packages(exclude=["django_bootstrap3view"]),
     data_files=[
-        (templates_dir, templates_files), ('',["LICENSE.txt","changelog.md"])
+        (templates_dir, templates_files), ('',["../LICENSE","../changelog.md"])
     ],
     include_package_data=True,
     install_requires=[
@@ -36,7 +36,6 @@ setup(
         "django-webtest",
         "dj_database_url",
         "simplejson",
-        "csv",
     ],
     scripts=['bin/create_bootstrap_project'],
 )
