@@ -1,5 +1,5 @@
 import os
-from django_bootstrap3view_app.management.commands.start_shopify_app import Command
+from django_bootstrap3view_app.management.commands.create_bootstrap_project import Command
 
 from django.test import TestCase
 import shutil
