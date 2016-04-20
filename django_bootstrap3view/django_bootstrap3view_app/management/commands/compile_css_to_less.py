@@ -3,7 +3,7 @@ __author__ = 'ernesto'
 from django.core.management.base import BaseCommand, CommandError
 from optparse import make_option
 
-from lib.css_to_less import CSSConverter
+from django_bootstrap3view.django_bootstrap3view_app.lib.css_to_less import CSSConverter
 
 class Command(BaseCommand):
 

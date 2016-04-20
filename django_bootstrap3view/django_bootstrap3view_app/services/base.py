@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import get_object_or_404
 
-from django_bootstrap3view_app.utils.render import render, render_string
-from django_bootstrap3view_app.utils.python import convert_to_bool
+from django_bootstrap3view.django_bootstrap3view_app.utils.render import render, render_string
+from django_bootstrap3view.django_bootstrap3view_app.utils.python import convert_to_bool
 
 
 class BaseService(object):
@@ -194,13 +194,13 @@ class BaseService(object):
 
     def _render_row_value(self, row_data, render):
 
-        if isinstance(render, basestring):
+        if isinstance(render, str):
             if isinstance(row_data, dict):
-                return unicode(row_data[render])
+                return str(row_data[render])
             else:
-                return unicode(getattr(row_data, render))
+                return str(getattr(row_data, render))
         else:
-            return unicode(render(row_data))
+            return str(render(row_data))
 
     def get_params(self, data, params):
 

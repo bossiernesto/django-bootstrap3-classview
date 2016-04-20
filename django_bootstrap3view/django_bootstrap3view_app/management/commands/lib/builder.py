@@ -4,10 +4,11 @@ from django.core.management import call_command
 from django.utils.crypto import get_random_string
 from .templates import render_template
 import sys
-from django_bootstrap3view_app.utils.ansi_formater import AnsiColorsFormater
+from django_bootstrap3view.django_bootstrap3view_app.utils.ansi_formater import AnsiColorsFormater
 import distutils.dir_util
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
+
 
 class ProjectBuilder(object):
     def __init__(self, *args):
@@ -150,15 +151,14 @@ class ProjectBuilder(object):
         bootstrap_dir = os.path.join(__dir__, os.pardir, "../../bootstrap")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Creating bootstrap folder...")
-        self._create_dir("media","bootstrap")
+        self._create_dir("media", "bootstrap")
         self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Copying bootstrap files...")
-        #copy all bootstrapfiles
-        distutils.dir_util.copy_tree(bootstrap_dir, self._get_dir("media","bootstrap"))
+        # copy all bootstrapfiles
+        distutils.dir_util.copy_tree(bootstrap_dir, self._get_dir("media", "bootstrap"))
 
         self.formater.custom_message("BOLD_MAGENTA", "", "Done.\n")
-
 
     def go_back_to_main_dir(self):
         """

@@ -5,11 +5,11 @@ import simplejson as json
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 
-from django_bootstrap3view_app.utils.render import render, render_string
-from django_bootstrap3view_app.utils.python import convert_to_bool
+from django_bootstrap3view.django_bootstrap3view_app.utils.render import render, render_string
+from django_bootstrap3view.django_bootstrap3view_app.utils.python import convert_to_bool
 
 from django.core.exceptions import ValidationError
-from django_bootstrap3view_app.utils.csv import Exporter
+from django_bootstrap3view.django_bootstrap3view_app.utils.csv import Exporter
 
 class BaseView(TemplateView):
 
@@ -110,7 +110,7 @@ class AjaxSaveBaseView(AjaxBaseView):
             self.after_save(self.entity)
             return self.render(self.on_success)
 
-        except ValidationError, e:
+        except ValidationError as e:
             return self.render(self.on_fail, str(e))
 
     def render(self, function, *args, **kwargs):

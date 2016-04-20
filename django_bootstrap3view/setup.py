@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 #define variables for setup.py
 __author__ = 'Ernesto Bossi'
-__version__ = "0.0.8"
+__version__ = "0.0.9"
 
 __dir__ = os.path.dirname(os.path.abspath(__file__))
 templates_dir = os.path.join(__dir__, "django_bootstrap3view_app", "management", "commands", "templates")
@@ -26,7 +26,7 @@ setup(
         "Framework :: Django",
         "Operating System :: OS Independent",
         "Topic :: Software Development",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.4",
     ],
     packages=find_packages(exclude=["django_bootstrap3view"]),
     data_files=[
@@ -35,7 +35,6 @@ setup(
     include_package_data=True,
     install_requires=[
         "django_conventions",
-        "south",
         "django-webtest",
         "dj_database_url",
         "simplejson",

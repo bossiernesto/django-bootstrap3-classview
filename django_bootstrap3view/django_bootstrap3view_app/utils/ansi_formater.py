@@ -41,7 +41,6 @@ class AnsiColorsFormater(object):
             self.enable_timestamp()
         self.message_timestamp = "%Y-%m-%d %H:%M:%S"
 
-
     def success_message(self, *data):
         color = self.ok_color
         return self._print(getattr(self.colorer, "OK{0}".format(color)), '', *data)
@@ -134,4 +133,4 @@ if __name__ == '__main__':
     formater.success_message('Hola esto funco bien')
     formater.disable_type()
     formater.success_message('Hola esto funco bien')
-    formater.custom_message("OKCYAN",'','Hola')
+    formater.custom_message("OKCYAN", '', 'Hola')
